@@ -7,7 +7,10 @@
 
 import Foundation
 
-struct DefinitionResponse: Decodable {
-    let word:  String
-    let definitions: [String]
+struct DefinitionsResponse: Decodable {
+    let definitions: [WordObject]
+}
+
+struct WordObject: Decodable {
+    let definition: String
 }
